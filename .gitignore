@@ -1,0 +1,13 @@
+data-download*.zip
+data-download*.txt
+data-download*.json
+
+._*
+.directory
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+
+/.bundle
+/.idea
