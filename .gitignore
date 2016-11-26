@@ -1,6 +1,4 @@
-data-download*.zip
-data-download*.txt
-data-download*.json
+data.pstore
 
 ._*
 .directory
