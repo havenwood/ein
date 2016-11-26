@@ -10,7 +10,7 @@ class EIN
 
   attr_accessor :data
 
-  def initialize url: 'http://apps.irs.gov/pub/epostcard/', filename: 'data-download-pub78.zip'
+  def initialize url: 'https://apps.irs.gov/pub/epostcard/', filename: 'data-download-pub78.zip'
     @url = url
     @filename = filename
     @data = []
