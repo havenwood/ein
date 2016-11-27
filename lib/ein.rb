@@ -44,11 +44,7 @@ class EIN
 
   def unzip zip
     puts "Unzipping data ..."
-    data = nil
-    Zip::Archive.open_buffer zip do |archive|
-      data = archive.map(&:read).join
-    end
-    data
+    Zip::Archive.open_buffer(zip) { |archive| archive.map(&:read).join }
   end
 
   def parse data
