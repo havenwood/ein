@@ -9,10 +9,10 @@ class EIN
   include Singleton
 
   attr_accessor :data
+  attr_accessor :url
 
-  def initialize url: 'https://apps.irs.gov/pub/epostcard/', filename: 'data-download-pub78.zip'
+  def initialize url: 'https://apps.irs.gov/pub/epostcard/data-download-pub78.zip'
     @url = url
-    @filename = filename
     @data = []
   end
 
@@ -40,12 +40,12 @@ class EIN
   private
 
   def download_zip
-    puts "Downloading #{@filename} from #{@url} ..."
-    HTTP.follow.get(File.join @url, @filename).to_s
+    puts "Downloading #{@url} ..."
+    HTTP.follow.get(@url).to_s
   end
 
   def unzip zip
-    puts "Unzipping #{@filename} ..."
+    puts "Unzipping data ..."
     text = nil
     Zip::Archive.open_buffer zip do |archive|
       text = archive.map(&:read).join
