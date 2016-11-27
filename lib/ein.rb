@@ -23,7 +23,7 @@ class EIN
   end
 
   def inspect
-    "#<EIN:#{@data.size} cached>"
+    "#<#{self.class.name}:#{@data.size} cached>"
   end
 
   def _dump depth = -1
@@ -43,7 +43,7 @@ class EIN
   end
 
   def unzip zip
-    puts "Unzipping data ..."
+    puts 'Unzipping data ...'
     Zip::Archive.open_buffer(zip) { |archive| archive.map(&:read).join }
   end
 
