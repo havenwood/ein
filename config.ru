@@ -19,7 +19,7 @@ class App < Roda
   route do |r|
     # GET /000003154 request
     r.is ':ein' do |ein|
-      opts[:ein].find_ein(ein) or response.status = 404
+      opts[:ein].find(ein) or response.status = 404
     end
   end
 end
