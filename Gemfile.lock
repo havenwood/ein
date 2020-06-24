@@ -14,7 +14,7 @@ GEM
     http-form_data (1.0.1)
     http_parser.rb (0.6.0)
     puma (3.12.4)
-    rack (2.0.8)
+    rack (2.2.3)
     roda (2.19.0)
       rack
     unf (0.1.4)
