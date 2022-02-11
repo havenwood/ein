@@ -13,7 +13,9 @@ GEM
       domain_name (~> 0.5)
     http-form_data (1.0.1)
     http_parser.rb (0.6.0)
-    puma (3.12.4)
+    nio4r (2.5.8)
+    puma (4.3.11)
+      nio4r (~> 2.0)
     rack (2.0.8)
     roda (2.19.0)
       rack
